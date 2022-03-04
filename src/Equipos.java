@@ -25,21 +25,63 @@ public class Equipos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Crear = new javax.swing.JFrame();
+        jLabel1 = new javax.swing.JLabel();
+        JfCrear = new javax.swing.JFormattedTextField();
+        Bcrear = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
         jMenuItem4 = new javax.swing.JMenuItem();
+        jCrear = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+
+        jLabel1.setFont(new java.awt.Font("Georgia", 1, 24)); // NOI18N
+        jLabel1.setText("Crear Equipo");
+
+        Bcrear.setText("crear");
+        Bcrear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BcrearActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout CrearLayout = new javax.swing.GroupLayout(Crear.getContentPane());
+        Crear.getContentPane().setLayout(CrearLayout);
+        CrearLayout.setHorizontalGroup(
+            CrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CrearLayout.createSequentialGroup()
+                .addGroup(CrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(CrearLayout.createSequentialGroup()
+                        .addGap(151, 151, 151)
+                        .addComponent(jLabel1))
+                    .addGroup(CrearLayout.createSequentialGroup()
+                        .addGap(57, 57, 57)
+                        .addComponent(JfCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 364, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(59, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, CrearLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(Bcrear)
+                .addGap(208, 208, 208))
+        );
+        CrearLayout.setVerticalGroup(
+            CrearLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(CrearLayout.createSequentialGroup()
+                .addGap(70, 70, 70)
+                .addComponent(jLabel1)
+                .addGap(39, 39, 39)
+                .addComponent(JfCrear, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(Bcrear)
+                .addContainerGap(64, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jMenu1.setText("Equipo");
-
-        jMenuItem1.setText("Crear");
-        jMenu1.add(jMenuItem1);
 
         jMenuItem2.setText("Modificar");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
@@ -55,12 +97,23 @@ public class Equipos extends javax.swing.JFrame {
         jMenuItem4.setText("Eliminar");
         jMenu1.add(jMenuItem4);
 
+        jCrear.setText("Crear");
+        jCrear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCrearActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jCrear);
+
         jMenuBar1.add(jMenu1);
 
         jMenu2.setText("Partidos");
 
-        jMenu3.setText("Partidos");
+        jMenu3.setText("Tabla ");
         jMenu2.add(jMenu3);
+
+        jMenuItem1.setText("Simular");
+        jMenu2.add(jMenuItem1);
 
         jMenuBar1.add(jMenu2);
 
@@ -83,6 +136,17 @@ public class Equipos extends javax.swing.JFrame {
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCrearActionPerformed
+      Crear.setLocationRelativeTo(this);
+        Crear.setVisible(true);
+        Crear.setAlwaysOnTop(true);
+       
+    }//GEN-LAST:event_jCrearActionPerformed
+
+    private void BcrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BcrearActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BcrearActionPerformed
 
     /**
      * @param args the command line arguments
@@ -120,6 +184,11 @@ public class Equipos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Bcrear;
+    private javax.swing.JFrame Crear;
+    private javax.swing.JFormattedTextField JfCrear;
+    private javax.swing.JMenuItem jCrear;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
