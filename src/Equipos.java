@@ -34,7 +34,13 @@ public class Equipos extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         JfCrear = new javax.swing.JFormattedTextField();
         Bcrear = new javax.swing.JButton();
-        jFrame1 = new javax.swing.JFrame();
+        Modificar = new javax.swing.JFrame();
+        jBModificar = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jCrear = new javax.swing.JMenuItem();
@@ -44,6 +50,10 @@ public class Equipos extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
+
+        Crear.setMaximumSize(new java.awt.Dimension(600, 600));
+        Crear.setPreferredSize(new java.awt.Dimension(250, 250));
+        Crear.setSize(new java.awt.Dimension(250, 250));
 
         jLabel1.setFont(new java.awt.Font("Georgia", 1, 24)); // NOI18N
         jLabel1.setText("Crear Equipo");
@@ -91,15 +101,61 @@ public class Equipos extends javax.swing.JFrame {
                 .addContainerGap(64, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
-        jFrame1.getContentPane().setLayout(jFrame1Layout);
-        jFrame1Layout.setHorizontalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        Modificar.setPreferredSize(new java.awt.Dimension(350, 350));
+        Modificar.setSize(new java.awt.Dimension(350, 350));
+
+        jBModificar.setText("Modificar");
+
+        jLabel2.setFont(new java.awt.Font("Georgia", 1, 24)); // NOI18N
+        jLabel2.setText("Modificar Equipo");
+
+        jLabel3.setFont(new java.awt.Font("Georgia", 1, 24)); // NOI18N
+        jLabel3.setText("Ingrese nuevo nombre");
+
+        javax.swing.GroupLayout ModificarLayout = new javax.swing.GroupLayout(Modificar.getContentPane());
+        Modificar.getContentPane().setLayout(ModificarLayout);
+        ModificarLayout.setHorizontalGroup(
+            ModificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ModificarLayout.createSequentialGroup()
+                .addGap(0, 96, Short.MAX_VALUE)
+                .addGroup(ModificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(ModificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ModificarLayout.createSequentialGroup()
+                            .addComponent(jLabel4)
+                            .addGap(436, 436, 436))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ModificarLayout.createSequentialGroup()
+                            .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(136, 136, 136)))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ModificarLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(ModificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ModificarLayout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(151, 151, 151))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ModificarLayout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(124, 124, 124))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ModificarLayout.createSequentialGroup()
+                        .addComponent(jBModificar)
+                        .addGap(222, 222, 222))))
         );
-        jFrame1Layout.setVerticalGroup(
-            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        ModificarLayout.setVerticalGroup(
+            ModificarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ModificarLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel4)
+                .addGap(14, 14, 14)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jBModificar)
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -157,9 +213,9 @@ public class Equipos extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void JmodificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JmodificarActionPerformed
-       jFrame1.setLocationRelativeTo(this);
-        jFrame1.setVisible(true);
-        jFrame1.setAlwaysOnTop(true);
+       Modificar.setLocationRelativeTo(this);
+        Modificar.setVisible(true);
+        Modificar.setAlwaysOnTop(true);
     }//GEN-LAST:event_JmodificarActionPerformed
 
     private void jCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCrearActionPerformed
@@ -227,9 +283,15 @@ public class Equipos extends javax.swing.JFrame {
     private javax.swing.JMenuItem JEliminar;
     private javax.swing.JFormattedTextField JfCrear;
     private javax.swing.JMenuItem Jmodificar;
+    private javax.swing.JFrame Modificar;
+    private javax.swing.JButton jBModificar;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JMenuItem jCrear;
-    private javax.swing.JFrame jFrame1;
+    private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
