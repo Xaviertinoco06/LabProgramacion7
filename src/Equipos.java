@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -254,7 +255,7 @@ public class Equipos extends javax.swing.JFrame {
       
         Equipo equipoModificar = getEquipo(String.valueOf(Jcombo.getSelectedItem()));
         String nuevoNombre = JModifircar.getText();
-        Equipo equipoModificado = new Equipo(nuevoNombre);
+        Equipo equipoModificado = new Equipo(modificar);
 
             if(!existsInFile(nuevoNombre)){
                 BufferedReader buffer;
@@ -278,15 +279,6 @@ public class Equipos extends javax.swing.JFrame {
             } catch (IOException ex) {
                 Logger.getLogger(Equipo.class.getName()).log(Level.SEVERE, null, ex);
             }
-               Jcombo.removeAllItems();
-               J.dispose();
-                JOptionPane.showMessageDialog(null, "Equipo Modificado Exitosamente");
-            }else{
-                jt_nuevoNombre.setText("");
-                jf_modificarEquipo.setAlwaysOnTop(false);
-                JOptionPane.showMessageDialog(null, "¡ERROR!\nEl nombre del equipo ingresado ya existe");
-                jf_modificarEquipo.setAlwaysOnTop(true);
-                } 
 
     
            
