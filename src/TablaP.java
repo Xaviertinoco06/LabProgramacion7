@@ -7,6 +7,6 @@
  *
  * @author xavie
  */
-class teamName {
+public class TablaP {
     
 }

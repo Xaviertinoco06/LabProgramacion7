@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
@@ -14,6 +15,7 @@ import java.util.ArrayList;
  * @author xavie
  */
 public class Equipo {
+    static Scanner scan=new Scanner(System.in).useDelimiter("\n");
  static ArrayList <Equipo> equipo1= new ArrayList();
     private String nombre;
     private int puntos;
@@ -115,6 +117,23 @@ public class Equipo {
         escribir.write(toString()+"\n");
         escribir.flush();
     
+    
+    }
+    public void array()throws IOException{
+        
+        equipos1 = new ArrayList();
+        if (equipos.exists()) {
+         
+                
+              
+                while (scan.hasNext()) {
+                    equipo1.add(new Equipo(scan.next(),scan.nextInt(),scan.nextInt(),scan.nextInt(),scan.nextInt(),scan.nextInt(),scan.nextInt(),scan.nextInt()));
+                }
+            } catch (Exception x) {
+            }
+            sc.close();
+        }//FIN IF
+    }
     }
     
   
