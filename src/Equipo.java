@@ -15,7 +15,7 @@ import java.util.Scanner;
  * @author xavie
  */
 public class Equipo {
-    static Scanner scan=new Scanner(System.in).useDelimiter("\n");
+  
  static ArrayList <Equipo> equipo1= new ArrayList();
     private String nombre;
     private int puntos;
@@ -120,21 +120,19 @@ public class Equipo {
     
     }
     public void array()throws IOException{
-        
-        equipos1 = new ArrayList();
-        if (equipos.exists()) {
-         
-                
-              
-                while (scan.hasNext()) {
-                    equipo1.add(new Equipo(scan.next(),scan.nextInt(),scan.nextInt(),scan.nextInt(),scan.nextInt(),scan.nextInt(),scan.nextInt(),scan.nextInt()));
-                }
-            } catch (Exception x) {
+        Scanner scan = null;
+        equipo1 = new ArrayList();
+        try {
+            scan = new Scanner(equipos);
+            scan.useDelimiter(",");
+            while (scan.hasNext()) {
+                equipo1.add(new Equipo(scan.next(), scan.nextInt(), scan.nextInt(), scan.nextInt(), scan.nextInt(), scan.nextInt(), scan.nextInt(), scan.nextInt()));
             }
-            sc.close();
-        }//FIN IF
+        } catch (Exception e) {
+        }
+        scan.close();
     }
-    }
+    
     
   
     
